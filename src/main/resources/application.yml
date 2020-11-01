@@ -1,5 +1,12 @@
 app:
+  cors:
+    allowed-origins: '*'
+    allowed-methods: '*'
+    allowed-headers: '*'
+    allow-credentials: true
+    max-age: 1800
   generator: "uuid"
+
 spring:
   data:
     mongodb:
