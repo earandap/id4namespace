@@ -6,9 +6,3 @@ app:
     allow-credentials: true
     max-age: 1800
   generator: "uuid"
-
-spring:
-  data:
-    mongodb:
-      database: id4namespace
-      auto-index-creation: true
