@@ -1,2 +1,7 @@
 app:
-  generator: "null"
+  generator: "uuid"
+spring:
+  data:
+    mongodb:
+      database: id4namespace
+      auto-index-creation: true
