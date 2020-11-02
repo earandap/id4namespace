@@ -1,11 +1,14 @@
 version: '3'
-
 services:
   id4namespace-service:
     image: id4namespace
     ports:
       - "8080:8080"
-    depends_on:
-      - mongodb
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/id4namespace
+      APP_GENERATOR: uuid
+  id4namespace-app:
+    image: id4namespace-app
+    depends_on:
+      - id4namespace-service
+    ports:
+      - "80:80"
